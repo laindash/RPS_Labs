@@ -34,5 +34,13 @@ namespace RPS_Labs.CW1
         private void label8_Click(object sender, EventArgs e) {
 
         }
+
+        private void label2_Click(object sender, EventArgs e) {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e) {
+
+        }
     }
 }

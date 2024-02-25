@@ -11,6 +11,7 @@ namespace RPS_Labs.CW1 {
             }
 
             double result;
+
             double h;
             double summa;
 

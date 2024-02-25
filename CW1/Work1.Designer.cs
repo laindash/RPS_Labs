@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent() {
             label1 = new Label();
-            label2 = new Label();
             label3 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -42,30 +41,28 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
+            label2 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            textBox6 = new TextBox();
+            label13 = new Label();
+            label14 = new Label();
+            textBox7 = new TextBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(21, 219);
+            label1.Location = new Point(13, 302);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(444, 25);
+            label1.Size = new Size(427, 25);
             label1.TabIndex = 1;
-            label1.Text = "Интеграл, вычисленный методом трапеций =";
+            label1.Text = "Интеграл, вычисленный методом трапеций";
             label1.Click += label1_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(21, 267);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(436, 25);
-            label2.TabIndex = 2;
-            label2.Text = "Интеграл, вычисленный методом парабол  =";
             // 
             // label3
             // 
@@ -105,22 +102,24 @@
             trapezoidalResult.AutoSize = true;
             trapezoidalResult.BackColor = SystemColors.Menu;
             trapezoidalResult.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            trapezoidalResult.Location = new Point(500, 219);
+            trapezoidalResult.Location = new Point(480, 302);
             trapezoidalResult.Margin = new Padding(4, 0, 4, 0);
             trapezoidalResult.Name = "trapezoidalResult";
-            trapezoidalResult.Size = new Size(0, 25);
+            trapezoidalResult.Size = new Size(27, 25);
             trapezoidalResult.TabIndex = 6;
+            trapezoidalResult.Text = "...";
             // 
             // parabolaResult
             // 
             parabolaResult.AutoSize = true;
             parabolaResult.BackColor = SystemColors.Menu;
             parabolaResult.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            parabolaResult.Location = new Point(500, 267);
+            parabolaResult.Location = new Point(480, 346);
             parabolaResult.Margin = new Padding(4, 0, 4, 0);
             parabolaResult.Name = "parabolaResult";
-            parabolaResult.Size = new Size(0, 25);
+            parabolaResult.Size = new Size(27, 25);
             parabolaResult.TabIndex = 7;
+            parabolaResult.Text = "...";
             // 
             // textBox3
             // 
@@ -213,11 +212,119 @@
             label8.Text = "(";
             label8.Click += label8_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(13, 346);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(414, 25);
+            label2.TabIndex = 16;
+            label2.Text = "Интеграл, вычисленный методом парабол";
+            label2.Click += label2_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(435, 346);
+            label9.Margin = new Padding(4, 0, 4, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(24, 25);
+            label9.TabIndex = 17;
+            label9.Text = "=";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(435, 302);
+            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(24, 25);
+            label10.TabIndex = 18;
+            label10.Text = "=";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(13, 207);
+            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(241, 25);
+            label11.TabIndex = 19;
+            label11.Text = "Округлить результат до";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Location = new Point(302, 207);
+            label12.Margin = new Padding(4, 0, 4, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(206, 25);
+            label12.TabIndex = 20;
+            label12.Text = "знака после запятой";
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox6.Location = new Point(250, 198);
+            textBox6.Margin = new Padding(4, 3, 4, 3);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(44, 38);
+            textBox6.TabIndex = 21;
+            textBox6.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.Location = new Point(13, 254);
+            label13.Margin = new Padding(4, 0, 4, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(356, 25);
+            label13.TabIndex = 22;
+            label13.Text = "Количество интервалов разбиения n";
+            label13.Click += label13_Click;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.Location = new Point(377, 254);
+            label14.Margin = new Padding(4, 0, 4, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(24, 25);
+            label14.TabIndex = 23;
+            label14.Text = "=";
+            // 
+            // textBox7
+            // 
+            textBox7.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox7.Location = new Point(409, 245);
+            textBox7.Margin = new Padding(4, 3, 4, 3);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(44, 38);
+            textBox7.TabIndex = 24;
+            textBox7.TextAlign = HorizontalAlignment.Center;
+            // 
             // Work1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(690, 331);
+            ClientSize = new Size(690, 393);
+            Controls.Add(textBox7);
+            Controls.Add(label14);
+            Controls.Add(label13);
+            Controls.Add(textBox6);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label2);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -231,7 +338,6 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(label1);
             Margin = new Padding(4, 3, 4, 3);
             Name = "Work1";
@@ -243,7 +349,6 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
@@ -257,5 +362,14 @@
         private Label label6;
         private Label label7;
         private Label label8;
+        private Label label2;
+        private Label label9;
+        private Label label10;
+        private Label label11;
+        private Label label12;
+        private TextBox textBox6;
+        private Label label13;
+        private Label label14;
+        private TextBox textBox7;
     }
 }
