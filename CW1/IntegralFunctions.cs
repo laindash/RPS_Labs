@@ -10,9 +10,13 @@ namespace RPS_Labs.CW1 {
         public static double TrapezoidalMethod(double a, double b, double A, double B, double C, int decimal_places, int n) {
             double 
                 result, 
-                sum = 0, 
+                sum = 0,
                 x = a, 
                 h = (b - a) / n;
+
+            if (A == 0) {
+                return 0;
+            }
 
             while (n > 1) {
                 x += h;
@@ -33,6 +37,10 @@ namespace RPS_Labs.CW1 {
                 x = a, 
                 h = (b - a) / n;
             int k = 1;
+
+            if (A == 0) {
+                return 0;
+            }
 
             while (n > 1) {
                 x += h;

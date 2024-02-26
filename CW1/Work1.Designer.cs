@@ -51,6 +51,9 @@
             label14 = new Label();
             n_in = new TextBox();
             Btn_calc = new Button();
+            Btn_save_initial = new Button();
+            Btn_save_result = new Button();
+            Btn_input_initial = new Button();
             SuspendLayout();
             // 
             // label1
@@ -309,7 +312,7 @@
             // Btn_calc
             // 
             Btn_calc.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            Btn_calc.Location = new Point(460, 85);
+            Btn_calc.Location = new Point(305, 393);
             Btn_calc.Name = "Btn_calc";
             Btn_calc.Size = new Size(203, 33);
             Btn_calc.TabIndex = 25;
@@ -317,11 +320,47 @@
             Btn_calc.UseVisualStyleBackColor = true;
             Btn_calc.Click += Btn_calc_Click;
             // 
+            // Btn_save_initial
+            // 
+            Btn_save_initial.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            Btn_save_initial.Location = new Point(442, 23);
+            Btn_save_initial.Name = "Btn_save_initial";
+            Btn_save_initial.Size = new Size(362, 32);
+            Btn_save_initial.TabIndex = 26;
+            Btn_save_initial.Text = "Сохранить исходные данные в файл";
+            Btn_save_initial.UseVisualStyleBackColor = true;
+            Btn_save_initial.Click += Btn_save_initial_Click;
+            // 
+            // Btn_save_result
+            // 
+            Btn_save_result.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            Btn_save_result.Location = new Point(442, 70);
+            Btn_save_result.Name = "Btn_save_result";
+            Btn_save_result.Size = new Size(362, 32);
+            Btn_save_result.TabIndex = 27;
+            Btn_save_result.Text = "Сохранить результат в файл";
+            Btn_save_result.UseVisualStyleBackColor = true;
+            Btn_save_result.Click += Btn_save_result_Click;
+            // 
+            // Btn_input_initial
+            // 
+            Btn_input_initial.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            Btn_input_initial.Location = new Point(442, 123);
+            Btn_input_initial.Name = "Btn_input_initial";
+            Btn_input_initial.Size = new Size(362, 32);
+            Btn_input_initial.TabIndex = 28;
+            Btn_input_initial.Text = "Ввести исходные данные из файла";
+            Btn_input_initial.UseVisualStyleBackColor = true;
+            Btn_input_initial.Click += Btn_input_initial_Click;
+            // 
             // Work1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(690, 393);
+            ClientSize = new Size(825, 438);
+            Controls.Add(Btn_input_initial);
+            Controls.Add(Btn_save_result);
+            Controls.Add(Btn_save_initial);
             Controls.Add(Btn_calc);
             Controls.Add(n_in);
             Controls.Add(label14);
@@ -378,5 +417,8 @@
         private Label label14;
         private TextBox n_in;
         private Button Btn_calc;
+        private Button Btn_save_initial;
+        private Button Btn_save_result;
+        private Button Btn_input_initial;
     }
 }
