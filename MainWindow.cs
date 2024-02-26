@@ -1,60 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace RPS_Labs
+﻿namespace RPS_Labs
 {
     public partial class MainWindow : Form
     {
-        public MainWindow()
-        {
+        public MainWindow() {
             InitializeComponent();
+
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            // Запретить открытие на полный экран
+            MaximizeBox = false;
+
+            Btn_lab2.Enabled = false;
+            Btn_lab3.Enabled = false;
+            Btn_lab4.Enabled = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
+        private void Work1_FormClosing(object sender, FormClosingEventArgs e) {
+            Btn_lab1.Enabled = true;
         }
+        private void Btn_lab1_Click(object sender, EventArgs e) {
+        Btn_lab1.Enabled = false;
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+        CW1.Work1 form_Work1 = new CW1.Work1();
 
+        form_Work1.FormBorderStyle = FormBorderStyle.FixedSingle;
+
+        // Запретить открытие на полный экран
+        form_Work1.MaximizeBox = false;
+
+#pragma warning disable CS8622 // Допустимость значений NULL для ссылочных типов в типе параметра не соответствует целевому объекту делегирования (возможно, из-за атрибутов допустимости значений NULL).
+        form_Work1.FormClosing += Work1_FormClosing;
+#pragma warning restore CS8622 // Допустимость значений NULL для ссылочных типов в типе параметра не соответствует целевому объекту делегирования (возможно, из-за атрибутов допустимости значений NULL).
+        
+        form_Work1.Show();
+        form_Work1.Text = "Работа №1. Алгоритмы и структуры данных";
         }
+        
 
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-
+        private void Btn_lab2_Click(object sender, EventArgs e) {
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+        private void Btn_lab3_Click(object sender, EventArgs e) {
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
+        private void Btn_lab4_Click(object sender, EventArgs e) {
         }
     }
 }

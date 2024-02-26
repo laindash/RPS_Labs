@@ -29,15 +29,15 @@
         private void InitializeComponent() {
             label1 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            trapezoidalResult = new Label();
-            parabolaResult = new Label();
-            textBox3 = new TextBox();
+            a_in = new TextBox();
+            b_in = new TextBox();
+            trapezoidal_result = new Label();
+            parabolic_result = new Label();
+            bigA_in = new TextBox();
             label4 = new Label();
-            textBox4 = new TextBox();
+            bigB_in = new TextBox();
             label5 = new Label();
-            textBox5 = new TextBox();
+            c_in = new TextBox();
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
@@ -46,10 +46,11 @@
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
-            textBox6 = new TextBox();
+            decimal_places_in = new TextBox();
             label13 = new Label();
             label14 = new Label();
-            textBox7 = new TextBox();
+            n_in = new TextBox();
+            Btn_calc = new Button();
             SuspendLayout();
             // 
             // label1
@@ -62,7 +63,6 @@
             label1.Size = new Size(427, 25);
             label1.TabIndex = 1;
             label1.Text = "Интеграл, вычисленный методом трапеций";
-            label1.Click += label1_Click;
             // 
             // label3
             // 
@@ -75,62 +75,62 @@
             label3.TabIndex = 3;
             label3.Text = "∫";
             // 
-            // textBox1
+            // a_in
             // 
-            textBox1.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(32, 140);
-            textBox1.Margin = new Padding(4, 3, 4, 3);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "a";
-            textBox1.Size = new Size(44, 38);
-            textBox1.TabIndex = 4;
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            a_in.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            a_in.Location = new Point(32, 140);
+            a_in.Margin = new Padding(4, 3, 4, 3);
+            a_in.Name = "a_in";
+            a_in.PlaceholderText = "a";
+            a_in.Size = new Size(44, 38);
+            a_in.TabIndex = 4;
+            a_in.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox2
+            // b_in
             // 
-            textBox2.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(32, 23);
-            textBox2.Margin = new Padding(4, 3, 4, 3);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "b";
-            textBox2.Size = new Size(44, 38);
-            textBox2.TabIndex = 5;
-            textBox2.TextAlign = HorizontalAlignment.Center;
+            b_in.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            b_in.Location = new Point(32, 23);
+            b_in.Margin = new Padding(4, 3, 4, 3);
+            b_in.Name = "b_in";
+            b_in.PlaceholderText = "b";
+            b_in.Size = new Size(44, 38);
+            b_in.TabIndex = 5;
+            b_in.TextAlign = HorizontalAlignment.Center;
             // 
-            // trapezoidalResult
+            // trapezoidal_result
             // 
-            trapezoidalResult.AutoSize = true;
-            trapezoidalResult.BackColor = SystemColors.Menu;
-            trapezoidalResult.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            trapezoidalResult.Location = new Point(480, 302);
-            trapezoidalResult.Margin = new Padding(4, 0, 4, 0);
-            trapezoidalResult.Name = "trapezoidalResult";
-            trapezoidalResult.Size = new Size(27, 25);
-            trapezoidalResult.TabIndex = 6;
-            trapezoidalResult.Text = "...";
+            trapezoidal_result.AutoSize = true;
+            trapezoidal_result.BackColor = SystemColors.Menu;
+            trapezoidal_result.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            trapezoidal_result.Location = new Point(480, 302);
+            trapezoidal_result.Margin = new Padding(4, 0, 4, 0);
+            trapezoidal_result.Name = "trapezoidal_result";
+            trapezoidal_result.Size = new Size(27, 25);
+            trapezoidal_result.TabIndex = 6;
+            trapezoidal_result.Text = "...";
             // 
-            // parabolaResult
+            // parabolic_result
             // 
-            parabolaResult.AutoSize = true;
-            parabolaResult.BackColor = SystemColors.Menu;
-            parabolaResult.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            parabolaResult.Location = new Point(480, 346);
-            parabolaResult.Margin = new Padding(4, 0, 4, 0);
-            parabolaResult.Name = "parabolaResult";
-            parabolaResult.Size = new Size(27, 25);
-            parabolaResult.TabIndex = 7;
-            parabolaResult.Text = "...";
+            parabolic_result.AutoSize = true;
+            parabolic_result.BackColor = SystemColors.Menu;
+            parabolic_result.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            parabolic_result.Location = new Point(480, 346);
+            parabolic_result.Margin = new Padding(4, 0, 4, 0);
+            parabolic_result.Name = "parabolic_result";
+            parabolic_result.Size = new Size(27, 25);
+            parabolic_result.TabIndex = 7;
+            parabolic_result.Text = "...";
             // 
-            // textBox3
+            // bigA_in
             // 
-            textBox3.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(91, 81);
-            textBox3.Margin = new Padding(4, 3, 4, 3);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "A";
-            textBox3.Size = new Size(44, 38);
-            textBox3.TabIndex = 8;
-            textBox3.TextAlign = HorizontalAlignment.Center;
+            bigA_in.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bigA_in.Location = new Point(91, 81);
+            bigA_in.Margin = new Padding(4, 3, 4, 3);
+            bigA_in.Name = "bigA_in";
+            bigA_in.PlaceholderText = "A";
+            bigA_in.Size = new Size(44, 38);
+            bigA_in.TabIndex = 8;
+            bigA_in.TextAlign = HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -142,18 +142,17 @@
             label4.Size = new Size(50, 31);
             label4.TabIndex = 9;
             label4.Text = "x +";
-            label4.Click += label4_Click;
             // 
-            // textBox4
+            // bigB_in
             // 
-            textBox4.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(193, 81);
-            textBox4.Margin = new Padding(4, 3, 4, 3);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "B";
-            textBox4.Size = new Size(44, 38);
-            textBox4.TabIndex = 10;
-            textBox4.TextAlign = HorizontalAlignment.Center;
+            bigB_in.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bigB_in.Location = new Point(193, 81);
+            bigB_in.Margin = new Padding(4, 3, 4, 3);
+            bigB_in.Name = "bigB_in";
+            bigB_in.PlaceholderText = "B";
+            bigB_in.Size = new Size(44, 38);
+            bigB_in.TabIndex = 10;
+            bigB_in.TextAlign = HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -166,16 +165,16 @@
             label5.TabIndex = 11;
             label5.Text = "x +";
             // 
-            // textBox5
+            // c_in
             // 
-            textBox5.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(297, 81);
-            textBox5.Margin = new Padding(4, 3, 4, 3);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "C";
-            textBox5.Size = new Size(44, 38);
-            textBox5.TabIndex = 12;
-            textBox5.TextAlign = HorizontalAlignment.Center;
+            c_in.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            c_in.Location = new Point(297, 81);
+            c_in.Margin = new Padding(4, 3, 4, 3);
+            c_in.Name = "c_in";
+            c_in.PlaceholderText = "C";
+            c_in.Size = new Size(44, 38);
+            c_in.TabIndex = 12;
+            c_in.TextAlign = HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -198,7 +197,6 @@
             label7.Size = new Size(58, 31);
             label7.TabIndex = 14;
             label7.Text = ") dx";
-            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -210,7 +208,6 @@
             label8.Size = new Size(23, 31);
             label8.TabIndex = 15;
             label8.Text = "(";
-            label8.Click += label8_Click;
             // 
             // label2
             // 
@@ -222,7 +219,6 @@
             label2.Size = new Size(414, 25);
             label2.TabIndex = 16;
             label2.Text = "Интеграл, вычисленный методом парабол";
-            label2.Click += label2_Click;
             // 
             // label9
             // 
@@ -268,15 +264,15 @@
             label12.TabIndex = 20;
             label12.Text = "знака после запятой";
             // 
-            // textBox6
+            // decimal_places_in
             // 
-            textBox6.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(250, 198);
-            textBox6.Margin = new Padding(4, 3, 4, 3);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(44, 38);
-            textBox6.TabIndex = 21;
-            textBox6.TextAlign = HorizontalAlignment.Center;
+            decimal_places_in.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            decimal_places_in.Location = new Point(250, 198);
+            decimal_places_in.Margin = new Padding(4, 3, 4, 3);
+            decimal_places_in.Name = "decimal_places_in";
+            decimal_places_in.Size = new Size(44, 38);
+            decimal_places_in.TabIndex = 21;
+            decimal_places_in.TextAlign = HorizontalAlignment.Center;
             // 
             // label13
             // 
@@ -288,7 +284,6 @@
             label13.Size = new Size(356, 25);
             label13.TabIndex = 22;
             label13.Text = "Количество интервалов разбиения n";
-            label13.Click += label13_Click;
             // 
             // label14
             // 
@@ -301,25 +296,37 @@
             label14.TabIndex = 23;
             label14.Text = "=";
             // 
-            // textBox7
+            // n_in
             // 
-            textBox7.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox7.Location = new Point(409, 245);
-            textBox7.Margin = new Padding(4, 3, 4, 3);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(44, 38);
-            textBox7.TabIndex = 24;
-            textBox7.TextAlign = HorizontalAlignment.Center;
+            n_in.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            n_in.Location = new Point(409, 245);
+            n_in.Margin = new Padding(4, 3, 4, 3);
+            n_in.Name = "n_in";
+            n_in.Size = new Size(44, 38);
+            n_in.TabIndex = 24;
+            n_in.TextAlign = HorizontalAlignment.Center;
+            // 
+            // Btn_calc
+            // 
+            Btn_calc.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            Btn_calc.Location = new Point(460, 85);
+            Btn_calc.Name = "Btn_calc";
+            Btn_calc.Size = new Size(203, 33);
+            Btn_calc.TabIndex = 25;
+            Btn_calc.Text = "Произвести расчёт";
+            Btn_calc.UseVisualStyleBackColor = true;
+            Btn_calc.Click += Btn_calc_Click;
             // 
             // Work1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(690, 393);
-            Controls.Add(textBox7);
+            Controls.Add(Btn_calc);
+            Controls.Add(n_in);
             Controls.Add(label14);
             Controls.Add(label13);
-            Controls.Add(textBox6);
+            Controls.Add(decimal_places_in);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -328,21 +335,20 @@
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(textBox5);
+            Controls.Add(c_in);
             Controls.Add(label5);
-            Controls.Add(textBox4);
+            Controls.Add(bigB_in);
             Controls.Add(label4);
-            Controls.Add(textBox3);
-            Controls.Add(parabolaResult);
-            Controls.Add(trapezoidalResult);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(bigA_in);
+            Controls.Add(parabolic_result);
+            Controls.Add(trapezoidal_result);
+            Controls.Add(b_in);
+            Controls.Add(a_in);
             Controls.Add(label3);
             Controls.Add(label1);
             Margin = new Padding(4, 3, 4, 3);
             Name = "Work1";
             Text = "Work1";
-            Load += Work1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -350,15 +356,15 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label trapezoidalResult;
-        private System.Windows.Forms.Label parabolaResult;
-        private TextBox textBox3;
+        private System.Windows.Forms.TextBox a_in;
+        private System.Windows.Forms.TextBox b_in;
+        private System.Windows.Forms.Label trapezoidal_result;
+        private System.Windows.Forms.Label parabolic_result;
+        private TextBox bigA_in;
         private Label label4;
-        private TextBox textBox4;
+        private TextBox bigB_in;
         private Label label5;
-        private TextBox textBox5;
+        private TextBox c_in;
         private Label label6;
         private Label label7;
         private Label label8;
@@ -367,9 +373,10 @@
         private Label label10;
         private Label label11;
         private Label label12;
-        private TextBox textBox6;
+        private TextBox decimal_places_in;
         private Label label13;
         private Label label14;
-        private TextBox textBox7;
+        private TextBox n_in;
+        private Button Btn_calc;
     }
 }
