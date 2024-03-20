@@ -74,7 +74,6 @@ namespace RPS_Labs
             Btn_lab3.TabIndex = 2;
             Btn_lab3.Text = "3";
             Btn_lab3.UseVisualStyleBackColor = true;
-            Btn_lab3.Click += Btn_lab3_Click;
             // 
             // Btn_lab4
             // 
@@ -85,7 +84,6 @@ namespace RPS_Labs
             Btn_lab4.TabIndex = 3;
             Btn_lab4.Text = "4";
             Btn_lab4.UseVisualStyleBackColor = true;
-            Btn_lab4.Click += Btn_lab4_Click;
             // 
             // label1
             // 
