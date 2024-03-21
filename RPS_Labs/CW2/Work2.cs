@@ -27,10 +27,12 @@ namespace RPS_Labs.CW2 {
                 // Преобразование строковых значений в массив double
                 double[] array = valuesAsString.Split(';').Select(double.Parse).ToArray();
 
-                // Обратное преобразование массива в строку с исходным разделителем
                 string originalValuesAsString = string.Join(";", array.Select(num => num.ToString()));
 
-                array_input.Text = originalValuesAsString;
+                if (array_input.Text != originalValuesAsString) {
+                    array_input.Text = originalValuesAsString;
+                    MessageBox.Show("Некорректные данные были исправлены.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
                 // Нахождение наиболее часто встречающихся значений в массиве
                 List<double> mostCommonValues = ArrayFunctions.FindMostCommonValues(array);
@@ -62,6 +64,7 @@ namespace RPS_Labs.CW2 {
                 e.Handled = true;
                 return;
             }
+            label_result.Text = "...";
         }
 
         private void Btn_input_initial_Click(object sender, EventArgs e) {
@@ -106,7 +109,10 @@ namespace RPS_Labs.CW2 {
                 // Обратное преобразование массива в строку с исходным разделителем
                 string originalValuesAsString = string.Join(";", array.Select(num => num.ToString()));
 
-                array_input.Text = originalValuesAsString;
+                if (array_input.Text != originalValuesAsString) {
+                    array_input.Text = originalValuesAsString;
+                    MessageBox.Show("Некорректные данные были исправлены.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
                 // Диалог выбора места сохранения файла
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -148,7 +154,10 @@ namespace RPS_Labs.CW2 {
                 // Обратное преобразование массива в строку с исходным разделителем
                 string originalValuesAsString = string.Join(";", array.Select(num => num.ToString()));
 
-                array_input.Text = originalValuesAsString;
+                if (array_input.Text != originalValuesAsString) {
+                    array_input.Text = originalValuesAsString;
+                    MessageBox.Show("Некорректные данные были исправлены.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
                 // Нахождение наиболее часто встречающихся значений в массиве
                 List<double> mostCommonValues = ArrayFunctions.FindMostCommonValues(array);
